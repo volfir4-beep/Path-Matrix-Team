@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  height: 80px;
+  background: black;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.path {
+  color: orange;
+}
+
+.dashboard {
+  color: white;
+}
+
+.tabs button {
+  margin-left: 20px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  background: white;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  height: calc(100vh - 80px);
+}
+
+.sidebar {
+  background: #ececec;
+  padding: 25px;
+}
+
+.sidebar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.map-wrapper {
+  position: relative;
+}
+
+.map-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats-card {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #0b56f1;
+  color: white;
+
+  padding: 18px 30px;
+  border-radius: 12px;
+
+  display: flex;
+  gap: 40px;
+}
+
+.sidebar h3 {
+  color: #0052cc;
+  margin-top: 25px;
+}
+
+.sidebar input[type="text"] {
+  width: 90%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #d9d9d9;
+}
+
+.upload-btn {
+  padding: 12px;
+  width: 90%;
+  border: 1px dashed gray;
+  background: white;
+  cursor: pointer;
+}
+.map-wrapper {
+  position: relative;
+  height: 100%;
+}
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
