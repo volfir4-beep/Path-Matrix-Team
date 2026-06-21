@@ -75,5 +75,22 @@ header{
     font-family: 'Mochiy Pop One';
     text-shadow: 2px 2px 2px black;
 }
+/* Keeps hidden sections from occupying space or displaying */
+.hidden {
+  display: none !important;
+}
 
+/* Base styles for your page sections */
+.page-section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* --- THE ACTIVE BUTTON STATE --- */
+/* This class will be automatically attached to the clicked button by JavaScript */
+.nav-btn.active {
+  transform: scale(1.08); /* Keeps it permanently enlarged */
+  background-color: #2d501a; /* Makes the green slightly darker so it looks selected */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional: adds a nice pop shadow */
+}
 
