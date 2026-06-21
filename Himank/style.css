@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mochiy+Pop+One&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ==========================================================
+   1. GLOBAL THEME VARIABLES (Default: Light Mode)
+   ========================================================== */
+:root {
+  --bg-primary: #ffffff;       /* Main page background */
+  --bg-surface: #f8f9fa;       /* Sidebar or form card backgrounds */
+  --text-main: #1a1a1a;        /* Primary text color */
+  --text-muted: #6c757d;       /* Secondary/subtle text color */
+  --border-color: #d0ebe1;     /* Borders and lines */
+  
+  /* Your brand color stays consistent across both themes */
+  --accent-green: #4b7a32;     /* Your PathMatrix Forest Green */
+  --accent-green-hover: #2d501a;
+}
+
+/* ==========================================================
+   2. DARK THEME OVERRIDES
+   ========================================================== */
+[data-theme="dark"] {
+  --bg-primary: #121212;       /* Deep dark background */
+  --bg-surface: #1e1e1e;       /* Elevated dark cards/sidebar */
+  --text-main: #f5f5f5;        /* Light text for high contrast */
+  --text-muted: #a0a0a0;       /* Muted gray text */
+  --border-color: #333333;     /* Subtle dark borders */
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-primary);
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+header{
+    padding: 20px 30px;
+    background-color: var(--border-color);
+    border-radius: 10px;
+    margin:20px;
+}
+.hero{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    font-family: 'Inter';
+    font-weight: 500;
+    color: var(--bg-surface);
+    background-color: var(--accent-green);
+    padding: 8px 10px;
+    border-radius: 5px;
+    /* margin-right: 20px; */
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 50ms ease-in-out 50ms;
+     text-shadow: 2px 2px 2px black;
+     text-align: center;
+}
+
+.button:hover{
+    background-color: var(--accent-green-hover);
+    transform: scale(105%);
+}
+
+.logo{
+    color: var(--accent-green);
+    font-size: 32px;
+    font-family: 'Mochiy Pop One';
+    text-shadow: 2px 2px 2px black;
+}
+
+
