@@ -59,9 +59,10 @@ header{
     /* margin-right: 20px; */
     font-size: 16px;
     cursor: pointer;
-    transition: transform 50ms ease-in-out 50ms;
+    /* transition: transform 50ms ease-in-out 50ms; */
      text-shadow: 2px 2px 2px black;
      text-align: center;
+     transition: all 0.3s ease-in-out;
 }
 
 .button:hover{
@@ -82,15 +83,28 @@ header{
 
 /* Base styles for your page sections */
 .page-section {
-  padding: 40px;
-  text-align: center;
+    padding: 40px;
+    text-align: center;
+    
+    /* Triggers the animation every time the section becomes visible */
+    animation: fadeInSlideUp 0.5s ease-out forwards; 
 }
-
 /* --- THE ACTIVE BUTTON STATE --- */
 /* This class will be automatically attached to the clicked button by JavaScript */
-.nav-btn.active {
-  transform: scale(1.08); /* Keeps it permanently enlarged */
-  background-color: #2d501a; /* Makes the green slightly darker so it looks selected */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional: adds a nice pop shadow */
+/* Keeps the button enlarged and darker when actively selected */
+.button.active {
+  transform: scale(1.1); /* Matches your hover scale */
+  background-color: var(--accent-green-hover); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
-
+/* 1. Define the fade-in and slide-up animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px); /* Starts slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Slides into normal position */
+    }
+}
